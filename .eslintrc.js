@@ -2,18 +2,19 @@ module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
+    jest: true, // 추가
   },
   extends: [
     'airbnb',
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
+    'plugin:react/jsx-runtime', // 추가
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
+    tsconfigRootDir: __dirname, // 추가
   },
   plugins: [
     'react',
@@ -28,6 +29,7 @@ module.exports = {
     },
   },
   rules: {
+    'import/no-unresolved': 'off', // 추가
     indent: ['error', 2],
     'no-trailing-spaces': 'error',
     curly: 'error',
