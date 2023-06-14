@@ -1,9 +1,10 @@
 import styled from 'styled-components';
 
-import useProductDetailStore from '../../hooks/useFetchProductDetail';
+import useProductDetailStore from '../../hooks/useProductDetailStore';
 
 import Images from './Images';
 import Description from './Description';
+import AddToCartForm from './form/AddToCartForm';
 
 const Container = styled.div`
   display: flex;
@@ -28,7 +29,7 @@ export default function ProductDetail() {
       </aside>
       <article>
         <h2>{product.name}</h2>
-        {/* <AddToCartForm /> 추후 추가 예정 */}
+        <AddToCartForm />
         <Description value={product.description} />
       </article>
     </Container>

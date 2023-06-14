@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import useProductDetailStore from '../stores/useProductDetailStore';
+import useProductDetailStore from './useProductDetailStore';
 
 const useFetchProduct = ({ productId } : {
     productId: string;
